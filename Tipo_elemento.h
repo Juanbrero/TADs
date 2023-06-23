@@ -2,12 +2,29 @@
 #define TIPO_ELEMENTO
 
 
-struct TipoElementoRep;
+
+// ---------------- ESTRUCTURA ----------------
+
+
+
+struct TipoElementoRep{
+
+    //Clave numerica de acceso al elemento
+    int clave;
+    //Contenido del elemento
+    void *valor;
+
+};
 /**
  * @brief Puntero a la estructura TipoElementoRep.
  * 
  */
 typedef struct TipoElementoRep *TipoElemento;
+
+
+
+// ---------------- FUNCIONALIDADES ----------------
+
 
 
 /**
@@ -16,7 +33,8 @@ typedef struct TipoElementoRep *TipoElemento;
  * @param clave 
  * @return TipoElemento 
  */
-TipoElemento te_crear(void* clave);
+TipoElemento te_crear(int clave);
+
 
 /**
  * @brief Crea un TipoElemento con la clave y su contenido pasados por parametro.
@@ -25,7 +43,7 @@ TipoElemento te_crear(void* clave);
  * @param valor 
  * @return TipoElemento 
  */
-TipoElemento te_crear_con_valor(void* clave, void* valor);
+TipoElemento te_crear_con_valor(int clave, void* valor);
 
 
 #endif //TIPO_ELEMENTO

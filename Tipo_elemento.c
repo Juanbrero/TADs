@@ -1,16 +1,13 @@
 #include <stdlib.h>
 #include "Tipo_elemento.h"
 
-struct TipoElementoRep{
 
-    //Clave de acceso al elemento
-    void* clave;
-    //Contenido del elemento
-    void* valor;
 
-};
+// ---------------- FUNCIONALIDADES ----------------
 
-TipoElemento te_crear(void* clave){
+
+
+TipoElemento te_crear(int clave){
 
     //inicializo la estructura TipoElemento asignando el espacio en memoria.
     TipoElemento te = (TipoElemento)malloc(sizeof(struct TipoElementoRep));
@@ -21,7 +18,8 @@ TipoElemento te_crear(void* clave){
     return te;
 }
 
-TipoElemento te_crear_con_valor(void* clave, void* valor){
+
+TipoElemento te_crear_con_valor(int clave, void* valor){
 
     //inicializo la estructura TipoElemento asignando el espacio en memoria.
     TipoElemento te = (TipoElemento)malloc(sizeof(struct TipoElementoRep));

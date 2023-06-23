@@ -16,7 +16,7 @@ struct ListaRep;
  * @brief Puntero a la estructura ListaRep.
  * 
  */
-typedef ListaRep *Lista;
+typedef struct ListaRep *Lista;
 
 
 struct IteradorRep;
@@ -107,7 +107,7 @@ TipoElemento l_buscar(Lista lista, int clave);
 
 
 /**
- * @brief Recibe una lista, el elemento y la posicion a insertar. Verifica si la lista se encuentra llena.
+ * @brief Recibe una lista, el elemento y la posicion ordinal a insertar. Verifica si la lista se encuentra llena.
  * 
  * @param lista 
  * @param elemento 
@@ -117,7 +117,7 @@ void l_insertar(Lista lista, TipoElemento elemento, int posicion);
 
 
 /**
- * @brief Recibe una lista y la posicion del elemento a eliminar. Verifica si es una posicion valida.
+ * @brief Recibe una lista y la posicion ordinal del elemento a eliminar. Verifica si es una posicion valida.
  * 
  * @param lista 
  * @param posicion 
@@ -126,7 +126,7 @@ void l_eliminar(Lista lista, int posicion);
 
 
 /**
- * @brief Recibe una lista y la posicion del elemento a recuperar.
+ * @brief Recibe una lista y la posicion ordinal del elemento a recuperar.
  * 
  * @param lista 
  * @param posicion 
@@ -166,6 +166,7 @@ bool hay_siguiente(Iterador iterador);
  * @return TipoElemento 
  */
 TipoElemento siguiente(Iterador iterador);
+
 
 
 #endif //LISTAS_H
