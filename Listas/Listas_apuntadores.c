@@ -10,14 +10,6 @@ static const int TAM_MAX = 100;
 
 
 
-struct NodoRep;
-/**
- * @brief Puntero a la estructura NodoRep.
- * 
- */
-typedef struct NodoRep *Nodo;
-
-
 /**
  * @brief Contiene los datos del TipoElemento y el puntero al nodo siguiente.
  * 

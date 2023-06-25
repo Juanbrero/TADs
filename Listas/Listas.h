@@ -11,6 +11,14 @@
 
 
 
+struct NodoRep;
+/**
+ * @brief Puntero a la estructura NodoRep.
+ * 
+ */
+typedef struct NodoRep *Nodo;
+
+
 struct ListaRep;
 /**
  * @brief Puntero a la estructura ListaRep.
