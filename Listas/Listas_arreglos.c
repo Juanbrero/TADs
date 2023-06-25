@@ -9,19 +9,23 @@ static const int TAM_MAX = 100;
 // ---------------- ESTRUCTURAS ----------------
 
 
-
+/**
+ * @brief Contiene un array de TipoElemento con los datos y la cantidad de elementos.
+ * 
+ */
 struct ListaRep{
 
-    //Array de valores
     TipoElemento *array;
     int longitud;
 
 };
 
-
+/**
+ * @brief Contiene la lista sobre la cual itera y el indice en el que se encuentra.
+ * 
+ */
 struct IteradorRep{
 
-    //lista a la que se asigna el iterador
     Lista lista;
     int PosActual;
 
@@ -232,8 +236,11 @@ TipoElemento l_recuperar(Lista lista, int posicion){
         printf("\nError al recuperar elemento. Posicion invalida.\n");
         return NULL;
     }
+    else{
 
-    return lista->array[posicion - 1];
+        return lista->array[posicion - 1];
+
+    }
 
 }
 
