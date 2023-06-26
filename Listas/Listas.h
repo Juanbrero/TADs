@@ -96,7 +96,7 @@ void l_agregar(Lista lista, TipoElemento elemento);
 
 
 /**
- * @brief Recibe una lista y la clave a borrar por parametros. Verifica que el elemento se encuentre en la lista.
+ * @brief Recibe una lista y la clave a borrar por parametros. Verifica que el elemento se encuentre en la lista y borra todas las ocurrencias.
  * 
  * @param lista 
  * @param clave 

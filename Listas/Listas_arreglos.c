@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "Listas.h"
 
-//Cantidad maxima de elementos de la lista
+//Cantidad maxima de elementos de la lista.
 static const int TAM_MAX = 100;
 
 
@@ -132,7 +132,7 @@ void l_borrar(Lista lista, int clave){
             }
             //Decrementa la longitud y corta el programa.
             lista->longitud--;
-            break;
+            
         }
     }
 

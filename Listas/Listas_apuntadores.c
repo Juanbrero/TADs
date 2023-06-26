@@ -1,7 +1,7 @@
 #include "Listas.h"
 #include <stdio.h>
 
-//Cantidad maxima de elementos de la lista
+//Cantidad maxima de elementos de la lista.
 static const int TAM_MAX = 100;
 
 
