@@ -60,7 +60,7 @@ Lista l_crear(){
     Lista nueva_lista = (Lista)malloc(sizeof(struct ListaRep));
     
     //Inicializa el array de nodos cursor poniendo los valores en 0 por defecto.
-    nueva_lista->cursor = calloc(TAM_MAX, sizeof(Nodo));
+    nueva_lista->cursor = calloc(TAM_MAX, sizeof(struct NodoRep));
     //Posiciona el inicio de la lista en NULL.
     nueva_lista->inicio = NULO;
     nueva_lista->longitud = 0;
@@ -130,7 +130,7 @@ void l_mostrar(Lista lista){
 void l_agregar(Lista lista, TipoElemento elemento){
 
     //Verifica que la lista no esta llena.
-    if(l_es_vacia(lista)){
+    if(l_es_llena(lista)){
 
         printf("\nError al agregar elemento. La lista se encuentra llena.\n");
         return;
@@ -369,7 +369,14 @@ TipoElemento l_recuperar(Lista lista, int posicion){
     }
     else{
 
-        return lista->cursor[posicion - 1].datos;
+        int p = lista->inicio;
+        //Busca el elemento de la posicion ordinal pasada por parametro.
+        for(int i = 0; i < posicion - 1; i++){
+
+            p = lista->cursor[p].siguiente;
+        }
+        
+        return lista->cursor[p].datos;
     
     }
 
@@ -405,10 +412,20 @@ bool hay_siguiente(Iterador iterador){
 
 
 TipoElemento siguiente(Iterador iterador){
+    
+    int p = iterador->lista->inicio;
+    //Avanza hasta el elemento en la posicion ordinal marcada por el iterador.
+    for(int i = 0; i < iterador->PosActual; i++){
+            
+        p = iterador->lista->cursor[p].siguiente;
+    }
 
-    //Retorna el elemento de la posicion actual y avanza a la siguiente posicion.
-    return (iterador->lista->cursor[iterador->PosActual++].datos);
+    //Incrementa la posicion actual.
+    iterador->PosActual++;
+    
+    return (iterador->lista->cursor[p].datos);
 
+    
 }
 
 
