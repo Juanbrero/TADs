@@ -313,38 +313,37 @@ void l_eliminar(Lista lista, int posicion){
         return;
     }
 
-    int p = lista->inicio, q;
+    int p;
+    int actual = lista->inicio;
 
     //Verifica si la posicion a eliminar es el inicio de la lista.
     if(posicion == 1){
 
-        //Salva la posicion a eliminar y desplaza el inicio a la siguiente posicion.
-        q = lista->cursor[p].siguiente;
-        lista->inicio = q;
-
-        //Libera el nodo encadenandolo al comienzo de los libres.
+        p = actual;
+        //Desplaza el inicio al siguiente elemento.
+        lista->inicio = lista->cursor[actual].siguiente;
+        //Libera el nodo encadenandolo a la posicion libre.
         lista->cursor[p].siguiente = lista->libres;
         lista->libres = p;
-
     }
     else{
 
         //Se posiciona en la posicion anterior a la de eliminacion.
         for(int i = 0; i < posicion - 2; i++){
 
-            p = lista->cursor[p].siguiente;
+            actual = lista->cursor[actual].siguiente;
 
         }
         //Salva la posicion a eliminar.
-        q = lista->cursor[p].siguiente;
+        p = lista->cursor[actual].siguiente;
 
         //Puentea el elemento a eliminar con su siguiente.
-        lista->cursor[p].siguiente = lista->cursor[q].siguiente;
+        lista->cursor[actual].siguiente = lista->cursor[p].siguiente;
 
         //Libera el nodo eliminado encadenandolo al principio de los nodos libres.
-        lista->cursor[q].siguiente = lista->libres;
+        lista->cursor[p].siguiente = lista->libres;
         //Desplaza el indice inicial de los nodos libres al elemento liberado.
-        lista->libres = q;
+        lista->libres = p;
 
     }
 
@@ -396,7 +395,7 @@ Iterador iterador(Lista lista){
 
     //Asigna la lista sobre la que va a iterar y lo posiciona al inicio de esta.
     iterador->lista = lista;
-    iterador->PosActual = 0;
+    iterador->PosActual = lista->inicio;
 
     return iterador;
 
@@ -406,26 +405,19 @@ Iterador iterador(Lista lista){
 bool hay_siguiente(Iterador iterador){
 
     //Verifica si llego al ultimo elemento de la lista.
-    return (iterador->PosActual < iterador->lista->longitud);
+    return (iterador->PosActual != NULO);
 
 }
 
 
 TipoElemento siguiente(Iterador iterador){
     
-    int p = iterador->lista->inicio;
-    //Avanza hasta el elemento en la posicion ordinal marcada por el iterador.
-    for(int i = 0; i < iterador->PosActual; i++){
-            
-        p = iterador->lista->cursor[p].siguiente;
-    }
+    //Recupera el elemento de la posicion.
+    TipoElemento actual = iterador->lista->cursor[iterador->PosActual].datos;
+    //Avanza el iterador al siguiente elemento.
+    iterador->PosActual = iterador->lista->cursor[iterador->PosActual].siguiente;
 
-    //Incrementa la posicion actual.
-    iterador->PosActual++;
-    
-    return (iterador->lista->cursor[p].datos);
-
-    
+    return actual;
 }
 
 
