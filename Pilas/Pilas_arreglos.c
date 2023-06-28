@@ -17,7 +17,7 @@ static const int TAM_MAX = 100;
  */
 struct PilaRep{
 
-    TipoElemento *datos;
+    TipoElemento *array;
     unsigned int tope;
 
 };
@@ -34,7 +34,7 @@ Pila p_crear(){
     Pila nueva_pila = (Pila)malloc(sizeof(struct PilaRep));
 
     //Inicializa el array de TipoElemento en 0 y posiciona el tope de la pila al inicio.
-    nueva_pila->datos = calloc(TAM_MAX + 1, sizeof(TipoElemento));
+    nueva_pila->array = calloc(TAM_MAX + 1, sizeof(TipoElemento));
     nueva_pila->tope = 0;
 
     return nueva_pila;
@@ -105,7 +105,7 @@ void p_apilar(Pila pila, TipoElemento elemento){
 
     //Desplaza el tope de la pila una posicion y apila el elemento en el tope.
     pila->tope++;
-    pila->datos[pila->tope] = elemento;
+    pila->array[pila->tope] = elemento;
 
 }
 
@@ -120,7 +120,7 @@ TipoElemento p_desapilar(Pila pila){
     }
 
     //Recupera el elemento del tope de la pila.
-    TipoElemento te = pila->datos[pila->tope];
+    TipoElemento te = pila->array[pila->tope];
     //Desplaza el tope de la pila al siguiente elemento.
     pila->tope--;
 
@@ -139,7 +139,7 @@ TipoElemento p_tope(Pila pila){
     }
 
     //Retorna el elemento del tope sin desapilarlo.
-    return pila->datos[pila->tope];
+    return pila->array[pila->tope];
 
 }
 

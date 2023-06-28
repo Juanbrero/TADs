@@ -7,7 +7,7 @@ static const int TAM_MAX = 100;
 
 
 
-// ---------------- ESTRUCTURA ----------------
+// ---------------- ESTRUCTURAS ----------------
 
 
 
