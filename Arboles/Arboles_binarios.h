@@ -111,14 +111,5 @@ NodoArbol a_conectar_hi(ArbolBinario arbol, NodoArbol padre, TipoElemento elemen
 NodoArbol a_conectar_hd(ArbolBinario arbol, NodoArbol padre, TipoElemento elemento);
 
 
-/**
- * @brief Verifica que el nodo se encuentra en el arbol y lo elimina. Decrementa la cantidad de elementos del arbol.
- * 
- * @param arbol 
- * @param nodo 
- */
-void a_eliminar_nodo(ArbolBinario arbol, NodoArbol nodo);
-
-
 
 #endif //ARBOLES_BINARIOS_H
