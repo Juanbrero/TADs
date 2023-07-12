@@ -1,39 +1,28 @@
-<h1><strong>Implementaciones:</strong></h1>
+<title>Implementaciones</title>
+    
+<ul>Listas:</ul>
+    <li>Arreglos</li>
+    <li>Apuntadores</li>
+    <li>Cursores</li>
 
-<h2>Listas:</h2>
-    <ul>
-        <li>Arreglos</li>
-        <li>Apuntadores</li>
-        <li>Cursores</li>
-    </ul>
+<ul>Pilas:</ul>
+    <li>Arreglos</li>
+    <li>Apuntadores</li>
 
-<h2>Pilas:</h2>
-    <ul>
-        <li>Arreglos</li>
-        <li>Apuntadores</li>
-    </ul>
+<ul>Colas:</ul>
+    <li>Arreglos Circulares</li>
+    <li>Apuntadores</li>
 
-<h2>Colas:</h2>
-    <ul>
-        <li>Arreglos Circulares</li>
-        <li>Apuntadores</li>
-    </ul>
+<ul>Arboles:</ul>
+    <li>Binarios</li>
+    <li>Binarios de Busqueda</li>
+    <li>AVL</li>
+    
+<ul>Tablas Hash:</ul>
+    <li>Lista de Colisiones</li>
+    <li>Zona de Overflow</li>
 
-<h2>Arboles:</h2>
-    <ul>
-        <li>Binarios</li>
-        <li>Binarios de Busqueda</li>
-        <li>AVL</li>
-    </ul>
-
-<h2>Tablas Hash:</h2>
-    <ul>
-        <li>Lista de Colisiones</li>
-        <li>Zona de Overflow</li>
-    </ul>
-
-<h2>Conjuntos:</h2>
-   <ul>
-        <li>Listas</li>
-        <li>Arboles AVL</li>
-   </ul>
+<ul>Conjuntos:</ul>
+    <li>Listas</li>
+    <li>Arboles AVL</li>
+   
