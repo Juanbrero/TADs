@@ -1,6 +1,6 @@
 <h1>Implementaciones</h1>
     
-<ul>Listas:
+<ul><strong>Listas:<strong>
     <li>Arreglos</li>
     <li>Apuntadores</li>
     <li>Cursores</li>
