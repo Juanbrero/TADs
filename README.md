@@ -1,12 +1,11 @@
 <h1>Implementaciones</h1>
     
-<ul><strong>Listas:<strong>
+<ul><h2>Listas:<h2>
     <li>Arreglos</li>
     <li>Apuntadores</li>
     <li>Cursores</li>
-</ul>
 
-<ul>Pilas:
+<h2>Pilas:</h2>
     <li>Arreglos</li>
     <li>Apuntadores</li>
 </ul>
