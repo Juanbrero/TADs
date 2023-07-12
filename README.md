@@ -1,4 +1,4 @@
-Implementaciones:
+</h1>Implementaciones:</h1>
 
 Listas:
     -> Arreglos
