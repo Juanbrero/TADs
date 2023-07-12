@@ -1,28 +1,34 @@
-<title>Implementaciones</title>
+<h1>Implementaciones</h1>
     
-<ul>Listas:</ul>
+<ul>Listas:
     <li>Arreglos</li>
     <li>Apuntadores</li>
     <li>Cursores</li>
+</ul>
 
-<ul>Pilas:</ul>
+<ul>Pilas:
     <li>Arreglos</li>
     <li>Apuntadores</li>
+</ul>
 
-<ul>Colas:</ul>
+<ul>Colas:
     <li>Arreglos Circulares</li>
     <li>Apuntadores</li>
+</ul>
 
-<ul>Arboles:</ul>
+<ul>Arboles:
     <li>Binarios</li>
     <li>Binarios de Busqueda</li>
     <li>AVL</li>
+</ul>
     
-<ul>Tablas Hash:</ul>
+<ul>Tablas Hash:
     <li>Lista de Colisiones</li>
     <li>Zona de Overflow</li>
+</ul>
 
-<ul>Conjuntos:</ul>
+<ul>Conjuntos:
     <li>Listas</li>
     <li>Arboles AVL</li>
+</ul>
    
